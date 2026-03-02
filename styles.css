@@ -1,0 +1,331 @@
+/* The core CSS for the background */
+html, body {
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; /*This prevents the page from scrolling*/
+    font-family: sans-serif;
+    background-color: #21094d;
+    background-image: url("pinkcloud.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    background-attachment: fixed;
+}
+
+.site-wrapper {
+  display: flex; /* Enables flexbox on the parent container */
+  flex-direction: column; /* Stacks children vertically */
+  min-height: 100vh; /* Ensures the wrapper is at least the height of the viewport */
+}
+
+main {
+  flex: 1; /* This makes the main content grow to fill the available space */
+  /* Shorthand for flex-grow: 1; flex-shrink: 0; flex-basis: auto; */
+}
+    .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding-bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: radial-gradient(circle at center,
+    rgba(255, 240, 255, 1) 20%,
+    rgba(220, 170, 255, 0.9) 40%,
+    rgba(180, 120, 255, 0.6) 70%,
+    rgba(150, 90, 220, 0) 100%
+  );
+  border-radius: 50%;
+  box-shadow:
+    0 0 8px rgba(220, 170, 255, 0.9),
+    0 0 12px rgba(220, 170, 255, 0.7),
+    0 0 18px rgba(220, 170, 255, 0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  box-shadow:
+    0 0 10px rgba(240, 200, 255, 1),
+    0 0 16px rgba(240, 200, 255, 0.9),
+    0 0 22px rgba(240, 200, 255, 0.7);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(220, 170, 255, 0.8) rgba(255, 255, 255, 0.05);
+}
+
+
+
+/* The core CSS for the centered, moving box */
+.centered-box {
+    position: fixed; /* Fixes the element relative to the viewport */
+    top: 50%; /* Moves the top edge to the vertical midpoint of the viewport */
+    left: 50%; /* Moves the left edge to the horizontal midpoint of the viewport */
+    transform: translate(-50%, -50%); /* Shifts the element back by half its own width/height to center it perfectly */
+    
+    /* Styling for the box itself */
+    padding: 20px;
+    height: 80vh;
+    width: 95vh;
+    background-color: rgba(6, 63, 86, 0.4);
+    text-align: center;
+    overflow-y: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 1000; /* Ensures it stays on top of other content */
+}
+
+.textcontents {
+    font-size: 16px;
+    color: rgb(255, 228, 248);
+    font-family: Arial, sans-serif;
+    text-align: center; /* Center text within its own flow */
+    margin: 0; /* Remove default paragraph margin */
+}
+
+.head {
+  font-size: 20px;
+}
+
+#name {
+  font-family: Arial;
+  float: right;
+  margin-top: 10px;
+  margin-right: 4%;
+}
+
+/*This element is the color of the hyperlinks on the page.*/
+a {
+  color: rgb(243, 177, 227);
+  text-decoration: none;
+}
+
+  .stuff {
+    width: 100%;
+    margin-left: 10px;
+  }
+
+          /* ===== Main wrapper ===== */
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 16px 80px;
+      text-align: center;
+    }
+       /* ===== Title ===== */
+    .title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 600;
+      color: #cfe6ff;
+      text-shadow:
+        0 0 8px rgba(159, 207, 255, 0.9),
+        0 0 18px rgba(120, 180, 255, 0.7);
+      margin-bottom: 24px;
+    }
+
+    /* ===== Navigation ===== */
+    nav {
+      display: flex;
+      gap: 32px;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #d4e7ff;
+      text-decoration: none;
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-shadow: 0 0 6px rgba(150, 200, 255, 0.8);
+      position: relative;
+      padding-bottom: 4px;
+      transition: color 0.25s ease, text-shadow 0.25s ease;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #7fd0ff, #e0b3ff);
+      border-radius: 999px;
+      transform: translateX(-50%);
+      transition: width 0.25s ease;
+      box-shadow: 0 0 8px rgba(127, 208, 255, 0.9);
+    }
+
+    nav a:hover {
+      color: #ffffff;
+      text-shadow:
+        0 0 10px rgba(200, 230, 255, 1),
+        0 0 20px rgba(160, 210, 255, 0.9);
+    }
+
+    nav a:hover::after {
+      width: 70%;
+    }
+
+    /* Active link style (set via class) */
+    nav a.active {
+      color: #ffffff;
+    }
+
+    nav a.active::after {
+      width: 70%;
+    }
+
+
+    /* ===== Placeholder content area ===== */
+.content {
+  position: fixed;
+  top: 58%; /* adjust to taste */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  width: 90vw;
+  max-width: 700px;
+  height: 40vh;
+
+  display: none;
+  overflow-y: auto;
+
+  background: radial-gradient(
+    circle at top,
+    rgba(40, 60, 120, 0.45),
+    rgba(5, 10, 30, 0.9)
+  );
+  border-radius: 18px;
+  padding: 32px 20px;
+  box-shadow:
+    0 0 24px rgba(120, 180, 255, 0.35),
+    0 0 80px rgba(40, 60, 120, 0.7);
+  border: 1px solid rgba(180, 210, 255, 0.25);
+  backdrop-filter: blur(4px);
+}
+
+
+.content h2 {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+      color: #e4f0ff;
+      text-shadow: 0 0 6px rgba(150, 200, 255, 0.8);
+}
+
+.content p {
+      font-size: 0.98rem;
+      line-height: 1.4;
+      color: #d0ddf5;
+      text-align:left;
+}
+
+
+    @media (max-height: 500px) {
+      nav {
+        gap: 18px;
+      }
+      .content {
+        width: 90vw;
+        height: auto;
+        top: 50%;
+        max-height: 70vh;
+        padding: 24px 16px;
+      }
+    }
+
+    @keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.content.active {
+  display: block;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+
+.social-icon-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;              /* room for GitHub later */
+  margin-top: 2.5rem;
+}
+
+/* Base icon link */
+.social-icon {
+  text-decoration: none;
+}
+
+/* Circular outline, thin white line, lavender glow */
+.icon-circle {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 2px solid rgba(200, 230, 255, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  position: relative;
+  box-shadow: 0 0 10px rgba(186, 148, 255, 0.7); /* lavender glow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* “in” text styled like a simple line icon */
+.icon-in {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+/* Hover glow (no shimmer) */
+.social-icon:hover .icon-circle {
+  transform: scale(1.08);
+  box-shadow:
+    0 0 10px rgba(206, 178, 255, 1),
+    0 0 20px rgba(206, 178, 255, 0.8),
+    0 0 30px rgba(206, 178, 255, 0.6);
+}
+
+.icon-github { font-family: system-ui, sans-serif; font-size: 28px; font-weight: 700; letter-spacing: 1px; }
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(0) skewX(-20deg);
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(220%) skewX(-20deg);
+    opacity: 0;
+  }
+}
+
