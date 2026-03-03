@@ -262,11 +262,27 @@ a {
   }
 }
 
-.content.active {
-  display: block;
-  animation: fadeIn 0.6s ease forwards;
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+
+.content {
+  display: none;
 }
 
+.content.active {
+  display: block;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.content.fade-out {
+  display: block; /* stays visible while fading out */
+  animation: fadeOut 0.4s ease forwards;
+}
 
 .social-icon-row {
   display: flex;
@@ -328,4 +344,5 @@ a {
     opacity: 0;
   }
 }
+
 
