@@ -13,13 +13,14 @@ html, body {
 }
 
 .site-wrapper {
-  display: flex; 
-  flex-direction: column; 
-  min-height: 100vh; 
+  display: flex; /* Enables flexbox on the parent container */
+  flex-direction: column; /* Stacks children vertically */
+  min-height: 100vh; /* Ensures the wrapper is at least the height of the viewport */
 }
 
 main {
-  flex: 1; 
+  flex: 1; /* This makes the main content grow to fill the available space */
+  /* Shorthand for flex-grow: 1; flex-shrink: 0; flex-basis: auto; */
 }
     .footer {
     position: fixed;
@@ -71,11 +72,12 @@ main {
 
 /* The core CSS for the centered, moving box */
 .centered-box {
-    position: fixed; 
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
+    position: fixed; /* Fixes the element relative to the viewport */
+    top: 50%; /* Moves the top edge to the vertical midpoint of the viewport */
+    left: 50%; /* Moves the left edge to the horizontal midpoint of the viewport */
+    transform: translate(-50%, -50%); /* Shifts the element back by half its own width/height to center it perfectly */
     
+    /* Styling for the box itself */
     padding: 20px;
     height: 80vh;
     width: 95vh;
@@ -84,15 +86,15 @@ main {
     overflow-y: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    z-index: 1000; 
+    z-index: 1000; /* Ensures it stays on top of other content */
 }
 
 .textcontents {
     font-size: 16px;
     color: rgb(255, 228, 248);
     font-family: Arial, sans-serif;
-    text-align: center; 
-    margin: 0; 
+    text-align: center; /* Center text within its own flow */
+    margin: 0; /* Remove default paragraph margin */
 }
 
 .head {
@@ -184,6 +186,7 @@ a {
       width: 70%;
     }
 
+    /* Active link style (set via class) */
     nav a.active {
       color: #ffffff;
     }
@@ -196,7 +199,7 @@ a {
     /* ===== Placeholder content area ===== */
 .content {
   position: fixed;
-  top: 58%; 
+  top: 58%; /* adjust to taste */
   left: 50%;
   transform: translate(-50%, -50%);
   
@@ -266,6 +269,7 @@ a {
   to {
     opacity: 0;
   }
+}
 
 .content {
   display: none;
@@ -277,15 +281,16 @@ a {
 }
 
 .content.fade-out {
-  display: block; 
+  display: block; /* stays visible while fading out */
   animation: fadeOut 0.4s ease forwards;
 }
+
 
 .social-icon-row {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 3rem;            
+  gap: 3rem;              /* room for GitHub later */
   margin-top: 2.5rem;
 }
 
@@ -305,7 +310,7 @@ a {
   align-items: center;
   color: #ffffff;
   position: relative;
-  box-shadow: 0 0 10px rgba(186, 148, 255, 0.7); 
+  box-shadow: 0 0 10px rgba(186, 148, 255, 0.7); /* lavender glow */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -341,6 +346,4 @@ a {
     opacity: 0;
   }
 }
-
-
 
