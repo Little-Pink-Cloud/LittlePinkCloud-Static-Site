@@ -106,7 +106,7 @@
             <br>
               <h2>Planned Enhancements</h2>
               <p>A visitor counter that retrieves and updates its count.</p>
-              <p>Adaptation for mobile devices</p>
+              <p>Adaptation for mobile devices.</p>
               <p></p>
             </section>
 
@@ -143,6 +143,7 @@
       const target = document.querySelector(link.getAttribute("href"));
       const isAlreadyActive = link.classList.contains("active");
 
+      // Case 1: Clicking the same active link → fade out and close
       if (isAlreadyActive) {
         link.classList.remove("active");
 
@@ -156,10 +157,11 @@
         return;
       }
 
+      // Case 2: Clicking a different link → normal instant switch
       links.forEach(l => l.classList.remove("active"));
       sections.forEach(sec => {
         sec.classList.remove("active");
-        sec.classList.remove("fade-out");
+        sec.classList.remove("fade-out"); // safety reset
       });
 
       link.classList.add("active");
@@ -169,5 +171,3 @@
   });
 </script>
 </html>
-
-
