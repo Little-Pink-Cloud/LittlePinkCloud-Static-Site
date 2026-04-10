@@ -3,7 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>Project Title</title>
-  <link rel="stylesheet" href="styles.css">
+
+  <!-- Global site styles -->
+  <link rel="stylesheet" href="../styles.css">
+
+  <!-- Project-specific overrides -->
+  <link rel="stylesheet" href="../assets/css/project.css">
 
   <style>
   html, body {
@@ -18,12 +23,12 @@
   <div class="page project-page">
 
     <!-- Navigation Back -->
-    <a href="index.html#projects" class="back-link">← Back to Site</a>
+    <a href="../index.html#projects" class="back-link">← Back to Site</a>
 
     <!-- 1. Hero Banner -->
     <header class="project-hero">
       <h1 class="project-title">Project Title</h1>
-      <img src="your-architecture-diagram.png" alt="Architecture Diagram" class="hero-diagram">
+      <img src="../assets/images/site/Under Construction Cloud WITH TEXT.png" alt="Under Construction" class="hero-diagram under-construction-img">
     </header>
 
     <!-- 2. Overview -->
@@ -39,18 +44,18 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ex metus, iaculis 
     <!-- 3. Architecture Diagram (Full Width) -->
     <section class="project-section">
       <h2>Architecture Diagram</h2>
-      <img src="your-diagram.png" alt="Architecture Diagram" class="full-diagram">
+      <img src="../assets/images/site/Under Construction Cloud WITH TEXT.png" alt="Architecture Diagram" class="full-diagram architecture-placeholder">
     </section>
 
     <!-- 4. Services & Technologies Used -->
     <section class="project-section">
       <h2>Services & Technologies Used</h2>
       <div class="service-badges">
-        <span class="badge">Azure VM</span>
-        <span class="badge">VNet</span>
-        <span class="badge">NSG</span>
-        <span class="badge">Bicep</span>
-        <span class="badge">Azure Monitor</span>
+        <span class="badge">Lorem ipsum</span>
+        <span class="badge">Lorem ipsum</span>
+        <span class="badge">Lorem ipsum</span>
+        <span class="badge">Lorem ipsum</span>
+        <span class="badge">Lorem ipsum</span>
       </div>
     </section>
 
@@ -58,23 +63,19 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ex metus, iaculis 
     <section class="project-section">
       <h2>Step-by-Step Walkthrough</h2>
 
-      <h3>1. Create Resource Group</h3>
+      <h3>1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
       <pre><code>
-az group create \
-  --name my-rg \
-  --location eastus
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam iaculis condimentum urna eget varius.
       </code></pre>
 
-      <img src="screenshot1.png" class="screenshot">
+      <img src="../assets/images/site/Under Construction Cloud WITH TEXT.png" class="screenshot screenshot-placeholder">
 
-      <h3>2. Deploy Bicep Template</h3>
+      <h3>2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
       <pre><code>
-az deployment group create \
-  --resource-group my-rg \
-  --template-file main.bicep
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam iaculis condimentum urna eget varius.
       </code></pre>
 
-      <img src="screenshot2.png" class="screenshot">
+      <img src="../assets/images/site/Under Construction Cloud WITH TEXT.png" class="screenshot screenshot-placeholder">
 
       <!-- Add as many steps as you want -->
     </section>
@@ -83,18 +84,7 @@ az deployment group create \
     <section class="project-section">
       <h2>Key Configurations</h2>
       <pre><code>
-// Example Bicep snippet
-resource vnet 'Microsoft.Network/virtualNetworks@2023-09-01' = {
-  name: 'myVnet'
-  location: resourceGroup().location
-  properties: {
-    addressSpace: {
-      addressPrefixes: [
-        '10.0.0.0/16'
-      ]
-    }
-  }
-}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam iaculis condimentum urna eget varius.
       </code></pre>
     </section>
 
@@ -102,8 +92,8 @@ resource vnet 'Microsoft.Network/virtualNetworks@2023-09-01' = {
     <section class="project-section">
       <h2>Challenges & Solutions</h2>
       <ul>
-        <li><strong>Challenge:</strong> NSG rules blocked SSH access.</li>
-        <li><strong>Solution:</strong> Added inbound rule for port 22 and validated via Azure Monitor logs.</li>
+        <li><strong>Challenge:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam iaculis condimentum urna eget varius. In posuere lectus sollicitudin, faucibus velit et, maximus lorem. Nam non neque in lorem. </li>
+        <li><strong>Solution:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam iaculis condimentum urna eget varius. In posuere lectus sollicitudin, faucibus velit et, maximus lorem. Nam non neque in lorem. </li>
       </ul>
     </section>
 
@@ -111,9 +101,9 @@ resource vnet 'Microsoft.Network/virtualNetworks@2023-09-01' = {
     <section class="project-section">
       <h2>Results & Metrics</h2>
       <ul>
-        <li>Deployment time: 1 minute 42 seconds</li>
-        <li>Connectivity test: Successful ICMP + TCP</li>
-        <li>Policy compliance: 100%</li>
+        <li>Deployment time: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+        <li>Connectivity test: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+        <li>Policy compliance: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
       </ul>
     </section>
 
@@ -121,25 +111,21 @@ resource vnet 'Microsoft.Network/virtualNetworks@2023-09-01' = {
     <section class="project-section">
       <h2>Key Takeaways</h2>
       <ul>
-        <li>Improved understanding of Azure networking.</li>
-        <li>Hands-on experience with IaC using Bicep.</li>
-        <li>Learned to troubleshoot NSG and routing issues.</li>
+        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
       </ul>
     </section>
 
     <!-- 10. GitHub Link -->
     <section class="project-section">
-      <a href="https://github.com/yourrepo" class="github-button">View on GitHub</a>
+      <a href="https://github.com/Little-Pink-Cloud" class="github-button">View on GitHub</a>
     </section>
 
     <!-- 11. Navigation -->
     <section class="project-nav">
-      <a href="project5.html" class="nav-link">← Previous Project</a>
-
           <!-- Navigation Back -->
-      <a href="index.html#projects" class="back-link">Back to Site</a>
-
-      <a href="project2.html" class="nav-link">Next Project →</a>
+      <a href="../index.html#projects" class="back-link">Back to Site</a>
     </section>
 
   </div>
