@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Project Title</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+  html, body {
+    overflow: auto !important;
+    height: auto !important;
+  }
+</style>
+</head>
+
+<body>
+
+  <div class="page project-page">
+
+    <!-- Navigation Back -->
+    <a href="index.html#projects" class="back-link">← Back to Site</a>
+
+    <!-- 1. Hero Banner -->
+    <header class="project-hero">
+      <h1 class="project-title">Project Title</h1>
+      <img src="your-architecture-diagram.png" alt="Architecture Diagram" class="hero-diagram">
+    </header>
+
+    <!-- 2. Overview -->
+    <section class="project-section">
+      <h2>Overview</h2>
+      <p>
+        
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ex metus, iaculis mollis varius id, accumsan sed nisi. Pellentesque eget euismod nulla. In non lorem nisl. Integer tortor est, eleifend in risus a, congue euismod ligula. Sed consectetur nisi nec lacus dignissim, a fermentum urna laoreet. Vivamus fringilla euismod odio vel venenatis. Pellentesque orci massa, placerat nec enim non, laoreet mattis dolor. Cras tortor elit, luctus vel convallis a, convallis sed nibh. Sed molestie lacinia turpis. In eu odio porta risus pharetra condimentum ac vitae augue. Mauris a semper odio, non sagittis odio. Morbi sit amet justo non lorem aliquam suscipit id at urna. Duis in nibh in sapien consequat mattis sit amet ac felis. Aliquam erat volutpat. Vestibulum egestas, massa quis aliquet aliquet, risus nulla viverra turpis, interdum auctor lorem est id erat. Nulla pulvinar risus vel erat auctor, non aliquet neque porttitor. 
+      </p>
+    </section>
+
+    <!-- 3. Architecture Diagram (Full Width) -->
+    <section class="project-section">
+      <h2>Architecture Diagram</h2>
+      <img src="your-diagram.png" alt="Architecture Diagram" class="full-diagram">
+    </section>
+
+    <!-- 4. Services & Technologies Used -->
+    <section class="project-section">
+      <h2>Services & Technologies Used</h2>
+      <div class="service-badges">
+        <span class="badge">Azure VM</span>
+        <span class="badge">VNet</span>
+        <span class="badge">NSG</span>
+        <span class="badge">Bicep</span>
+        <span class="badge">Azure Monitor</span>
+      </div>
+    </section>
+
+    <!-- 5. Step-by-Step Walkthrough -->
+    <section class="project-section">
+      <h2>Step-by-Step Walkthrough</h2>
+
+      <h3>1. Create Resource Group</h3>
+      <pre><code>
+az group create \
+  --name my-rg \
+  --location eastus
+      </code></pre>
+
+      <img src="screenshot1.png" class="screenshot">
+
+      <h3>2. Deploy Bicep Template</h3>
+      <pre><code>
+az deployment group create \
+  --resource-group my-rg \
+  --template-file main.bicep
+      </code></pre>
+
+      <img src="screenshot2.png" class="screenshot">
+
+      <!-- Add as many steps as you want -->
+    </section>
+
+    <!-- 6. Key Configurations -->
+    <section class="project-section">
+      <h2>Key Configurations</h2>
+      <pre><code>
+// Example Bicep snippet
+resource vnet 'Microsoft.Network/virtualNetworks@2023-09-01' = {
+  name: 'myVnet'
+  location: resourceGroup().location
+  properties: {
+    addressSpace: {
+      addressPrefixes: [
+        '10.0.0.0/16'
+      ]
+    }
+  }
+}
+      </code></pre>
+    </section>
+
+    <!-- 7. Challenges & Solutions -->
+    <section class="project-section">
+      <h2>Challenges & Solutions</h2>
+      <ul>
+        <li><strong>Challenge:</strong> NSG rules blocked SSH access.</li>
+        <li><strong>Solution:</strong> Added inbound rule for port 22 and validated via Azure Monitor logs.</li>
+      </ul>
+    </section>
+
+    <!-- 8. Results & Metrics -->
+    <section class="project-section">
+      <h2>Results & Metrics</h2>
+      <ul>
+        <li>Deployment time: 1 minute 42 seconds</li>
+        <li>Connectivity test: Successful ICMP + TCP</li>
+        <li>Policy compliance: 100%</li>
+      </ul>
+    </section>
+
+    <!-- 9. Key Takeaways -->
+    <section class="project-section">
+      <h2>Key Takeaways</h2>
+      <ul>
+        <li>Improved understanding of Azure networking.</li>
+        <li>Hands-on experience with IaC using Bicep.</li>
+        <li>Learned to troubleshoot NSG and routing issues.</li>
+      </ul>
+    </section>
+
+    <!-- 10. GitHub Link -->
+    <section class="project-section">
+      <a href="https://github.com/yourrepo" class="github-button">View on GitHub</a>
+    </section>
+
+    <!-- 11. Navigation -->
+    <section class="project-nav">
+      <a href="project5.html" class="nav-link">← Previous Project</a>
+
+          <!-- Navigation Back -->
+      <a href="index.html#projects" class="back-link">Back to Site</a>
+
+      <a href="project2.html" class="nav-link">Next Project →</a>
+    </section>
+
+  </div>
+
+</body>
+</html>
