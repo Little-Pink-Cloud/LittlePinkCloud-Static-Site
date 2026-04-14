@@ -22,8 +22,30 @@
 
   <div class="page project-page">
 
-    <!-- Navigation Back -->
-    <a href="../index.html#projects" class="back-link">← Back to Site</a>
+    <!-- Floating Navigation Toggle + Utility Bar -->
+<div class="floating-nav-tools">
+    <button class="nav-icon" onclick="scrollToTop()" data-label="Scroll to Top">↑</button>
+  <button id="navToggle" class="nav-icon" data-label="Toggle Navigation">☰</button>
+  <a href="../index.html" class="nav-icon" data-label="Back to Site">⌂</a>
+  <button class="nav-icon" onclick="scrollToBottom()" data-label="Scroll to Bottom">↓</button>
+</div>
+
+<!-- Celestial Floating Navigation Panel -->
+<nav id="floatingNav" class="floating-nav">
+  <h3 class="nav-title">Project Navigation</h3>
+  <ul>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#architecture">Architecture Diagram</a></li>
+    <li><a href="#screenshots">Project Screenshots</a></li>
+    <li><a href="#methodologies">Methodologies Used</a></li>
+    <li><a href="#walkthrough">Step-by-Step Walkthrough</a></li>
+    <li><a href="#configurations">Key Configurations</a></li>
+    <li><a href="#challenges">Challenges & Solutions</a></li>
+    <li><a href="#results">Results & Metrics</a></li>
+    <li><a href="#takeaways">Key Takeaways</a></li>
+    <li><a href="#github">View Project on GitHub</a></li>
+  </ul>
+</nav>
 
     <!-- 1. Hero Banner -->
     <header class="project-hero">
@@ -32,7 +54,7 @@
     </header>
 
     <!-- 2. Overview -->
-    <section class="project-section">
+    <section class="project-section" id="overview">
       <h2>Overview</h2>
       <p>
         
@@ -42,12 +64,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ex metus, iaculis 
     </section>
 
     <!-- 3. Architecture Diagram (Full Width) -->
-    <section class="project-section">
+    <section class="project-section" id="architecture">
       <h2>Architecture Diagram</h2>
       <img src="../assets/images/site/Under-Construction-Cloud-WITH-TEXT.png" alt="Architecture Diagram" class="full-diagram architecture-placeholder">
     </section>
 
-<section class="project-section">
+<section class="project-section" id="screenshots">
   <h2>Project Screenshots</h2>
 
   <div class="carousel" data-carousel>
@@ -74,9 +96,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ex metus, iaculis 
   </div>
 </section>
 
-    <!-- 4. Services & Technologies Used -->
-    <section class="project-section">
-      <h2>Services & Technologies Used</h2>
+    <!-- 4. Methodologies Used -->
+    <section class="project-section" id="methodologies">
+      <h2>Methodologies Used</h2>
       <div class="service-badges">
         <span class="badge">Lorem ipsum</span>
         <span class="badge">Lorem ipsum</span>
@@ -87,7 +109,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ex metus, iaculis 
     </section>
 
     <!-- 5. Step-by-Step Walkthrough -->
-    <section class="project-section">
+    <section class="project-section" id="walkthrough">
       <h2>Step-by-Step Walkthrough</h2>
 
       <h3>1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
@@ -108,7 +130,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam iaculis condimen
     </section>
 
     <!-- 6. Key Configurations -->
-    <section class="project-section">
+    <section class="project-section" id="configurations">
       <h2>Key Configurations</h2>
       <pre><code>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam iaculis condimentum urna eget varius.
@@ -116,7 +138,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam iaculis condimen
     </section>
 
     <!-- 7. Challenges & Solutions -->
-    <section class="project-section">
+    <section class="project-section" id="challenges">
       <h2>Challenges & Solutions</h2>
       <ul>
         <li><strong>Challenge:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam iaculis condimentum urna eget varius. In posuere lectus sollicitudin, faucibus velit et, maximus lorem. Nam non neque in lorem. </li>
@@ -125,7 +147,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam iaculis condimen
     </section>
 
     <!-- 8. Results & Metrics -->
-    <section class="project-section">
+    <section class="project-section" id="results">
       <h2>Results & Metrics</h2>
       <ul>
         <li>Deployment time: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
@@ -135,7 +157,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam iaculis condimen
     </section>
 
     <!-- 9. Key Takeaways -->
-    <section class="project-section">
+    <section class="project-section" id="takeaways">
       <h2>Key Takeaways</h2>
       <ul>
         <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
@@ -145,16 +167,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam iaculis condimen
     </section>
 
     <!-- 10. GitHub Link -->
-    <section class="project-section">
+    <section class="project-section" id="github">
       <a href="https://github.com/Little-Pink-Cloud" class="github-button">View on GitHub</a>
     </section>
-
-    <!-- 11. Navigation -->
-    <section class="project-nav">
-          <!-- Navigation Back -->
-      <a href="../index.html#projects" class="back-link">Back to Site</a>
-    </section>
-
   </div>
 
   <script>
@@ -235,6 +250,58 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 </script>
+<script>
+  // Toggle floating nav
+  document.getElementById("navToggle").addEventListener("click", () => {
+    const nav = document.getElementById("floatingNav");
+    const toggle = document.getElementById("navToggle");
 
+    nav.classList.toggle("open");
+
+    // ✨ Darken the nav toggle when active
+    toggle.classList.toggle("active");
+  });
+
+  // Smooth scroll
+  document.querySelectorAll('.floating-nav a').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(link.getAttribute('href'));
+      target.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+
+  // Highlight nav link only when clicked
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll(".floating-nav a");
+
+  document.querySelectorAll('.floating-nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.querySelectorAll('.floating-nav a').forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
+    });
+  });
+
+  // Utility buttons
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function scrollToBottom() {
+    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+  }
+
+  // Bottom nav dropdown toggle
+document.querySelector(".dropdown-toggle").addEventListener("click", () => {
+  document.querySelector(".proj-dropdown").classList.toggle("open");
+});
+
+document.addEventListener("click", (e) => {
+  const dropdown = document.querySelector(".proj-dropdown");
+  if (!dropdown.contains(e.target)) {
+    dropdown.classList.remove("open");
+  }
+});
+</script>
 </body>
 </html>

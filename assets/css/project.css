@@ -5,6 +5,143 @@ body {
     background-attachment: fixed;
 }
 
+.nav-icon {
+  position: relative;
+}
+
+/* Tooltip */
+.nav-icon::after {
+  content: attr(data-label);
+  position: absolute;
+  right: 120%;
+  top: 50%;
+  transform: translateY(-50%);
+  background:  rgba(140, 184, 255, 0.1);
+  padding: 6px 10px;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(180, 220, 255, 0.35);
+  box-shadow: 0 0 10px rgba(159, 162, 255, 0.879);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+/* Show on hover */
+.nav-icon:hover::after {
+  opacity: 1;
+  transform: translateY(-50%) translateX(-4px);
+}
+
+/* Floating Utility Bar */
+.floating-nav-tools {
+  position: fixed;
+  right: 2rem;
+  top: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  z-index: 9999;
+}
+
+.nav-icon {
+  background: rgba(159, 207, 255, 0.2);
+  border: 1px solid rgba(159, 207, 255, 0.2);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 12px rgba(180, 200, 255, 0.55);
+  color: #fff;
+  padding: 0.6rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all 0.25s ease;
+}
+
+.nav-icon:hover {
+  background: rgba(140, 184, 255, 0.1);
+  transform: scale(1.1);
+}
+
+/* Floating Navigation Panel */
+.floating-nav {
+  position: fixed;
+  right: 5rem;
+  top: 20%;
+  width: 240px;
+  padding: 1.5rem;
+  background: rgba(140, 184, 255, 0.1);
+  border: 1px solid rgba(180, 221, 255, 0.35);
+  border-radius: 16px;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 0 35px rgba(160, 203, 255, 0.35);
+  color: #fff;
+  z-index: 9998;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(20px);
+  transition: all 0.35s ease;
+}
+
+.floating-nav.open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0);
+}
+
+.floating-nav .nav-title {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
+}
+
+.floating-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.floating-nav li {
+  margin-bottom: 0.75rem;
+}
+
+.floating-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  opacity: 0.85;
+  transition: opacity 0.2s ease, text-shadow 0.2s ease;
+}
+
+.floating-nav a:hover,
+.floating-nav a.active {
+  opacity: 1;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .floating-nav {
+    right: 1rem;
+    width: 80%;
+    top: auto;
+    bottom: 2rem;
+  }
+
+  .floating-nav-tools {
+    right: 1rem;
+  }
+}
+
+/* Darken nav toggle when active */
+#navToggle.active {
+  background: rgba(140, 184, 255, 0.1);
+  border-color: rgba(80, 120, 160, 0.6);
+}
+
 .hero-diagram {
     max-width: 350px;
     width: 90%;
