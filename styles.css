@@ -301,8 +301,8 @@ a {
 
 /* Circular outline, thin white line, lavender glow */
 .icon-circle {
-  width: 72px;
-  height: 72px;
+  width: 58px;
+  height: 58px;
   border-radius: 50%;
   border: 2px solid rgba(200, 230, 255, 1);
   display: flex;
@@ -364,7 +364,11 @@ a {
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 
-  display: block;        /* makes the link behave like a card */
+  min-height: 50px; /* adjust to taste */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   text-decoration: none; /* removes underline */
   color: inherit;        /* keeps your text color */
 }
