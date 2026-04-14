@@ -28,7 +28,7 @@
     <!-- 1. Hero Banner -->
     <header class="project-hero">
       <h1 class="project-title">Project Title</h1>
-      <img src="../assets/images/site/Under Construction Cloud WITH TEXT.png" alt="Under Construction" class="hero-diagram under-construction-img">
+      <img src="../assets/images/site/Under-Construction-Cloud-WITH-TEXT.png" alt="Under Construction" class="hero-diagram under-construction-img">
     </header>
 
     <!-- 2. Overview -->
@@ -44,8 +44,35 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ex metus, iaculis 
     <!-- 3. Architecture Diagram (Full Width) -->
     <section class="project-section">
       <h2>Architecture Diagram</h2>
-      <img src="../assets/images/site/Under Construction Cloud WITH TEXT.png" alt="Architecture Diagram" class="full-diagram architecture-placeholder">
+      <img src="../assets/images/site/Under-Construction-Cloud-WITH-TEXT.png" alt="Architecture Diagram" class="full-diagram architecture-placeholder">
     </section>
+
+<section class="project-section">
+  <h2>Project Screenshots</h2>
+
+  <div class="carousel" data-carousel>
+    <button class="carousel-btn prev" data-carousel-prev>❮</button>
+
+    <div class="carousel-track" data-carousel-track>
+      <div class="carousel-slide active" data-caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
+        <img src="../assets/images/site/Under-Construction-Cloud-WITH-TEXT.png" alt="Project Screenshot">
+      </div>
+      <div class="carousel-slide" data-caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
+        <img src="../assets/images/site/Under-Construction-Cloud-WITH-TEXT.png" alt="Project Screenshot">
+      </div>
+            <div class="carousel-slide" data-caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
+        <img src="../assets/images/site/Under-Construction-Cloud-WITH-TEXT.png" alt="Project Screenshot">
+      </div>
+    </div>
+
+    <button class="carousel-btn next" data-carousel-next>❯</button>
+
+    <div class="carousel-dots" data-carousel-dots></div>
+
+    <div class="carousel-caption-below" data-carousel-caption></div>
+
+  </div>
+</section>
 
     <!-- 4. Services & Technologies Used -->
     <section class="project-section">
@@ -68,14 +95,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ex metus, iaculis 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam iaculis condimentum urna eget varius.
       </code></pre>
 
-      <img src="../assets/images/site/Under Construction Cloud WITH TEXT.png" class="screenshot screenshot-placeholder">
+      <img src="../assets/images/site/Under-Construction-Cloud-WITH-TEXT.png" alt="Project Screenshot" class="screenshot screenshot-placeholder">
 
       <h3>2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
       <pre><code>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam iaculis condimentum urna eget varius.
       </code></pre>
 
-      <img src="../assets/images/site/Under Construction Cloud WITH TEXT.png" class="screenshot screenshot-placeholder">
+      <img src="../assets/images/site/Under-Construction-Cloud-WITH-TEXT.png" alt="Project Screenshot" class="screenshot screenshot-placeholder">
 
       <!-- Add as many steps as you want -->
     </section>
@@ -129,6 +156,85 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam iaculis condimen
     </section>
 
   </div>
+
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const carousels = document.querySelectorAll("[data-carousel]");
+
+  carousels.forEach(carousel => {
+    const track = carousel.querySelector("[data-carousel-track]");
+    const slides = Array.from(track.children);
+    const prevBtn = carousel.querySelector("[data-carousel-prev]");
+    const nextBtn = carousel.querySelector("[data-carousel-next]");
+    const dotsContainer = carousel.querySelector("[data-carousel-dots]");
+
+    /* ⭐ NEW: caption element */
+    const captionBox = carousel.querySelector("[data-carousel-caption]");
+
+    let currentIndex = 0;
+
+    /* ===== Create Dots ===== */
+    slides.forEach((_, i) => {
+      const dot = document.createElement("button");
+      if (i === 0) dot.classList.add("active");
+      dotsContainer.appendChild(dot);
+
+      dot.addEventListener("click", () => goToSlide(i));
+    });
+
+    const dots = Array.from(dotsContainer.children);
+
+    /* ===== Slide Logic ===== */
+    function goToSlide(index) {
+      slides[currentIndex].classList.remove("active");
+      dots[currentIndex].classList.remove("active");
+
+      currentIndex = index;
+
+      slides[currentIndex].classList.add("active");
+      dots[currentIndex].classList.add("active");
+
+      /* ⭐ NEW: Update caption */
+      const caption = slides[currentIndex].dataset.caption || "";
+      captionBox.textContent = caption;
+    }
+
+    /* ⭐ Initialize caption on load */
+    const initialCaption = slides[0].dataset.caption || "";
+    captionBox.textContent = initialCaption;
+
+    prevBtn.addEventListener("click", () => {
+      const newIndex = (currentIndex - 1 + slides.length) % slides.length;
+      goToSlide(newIndex);
+    });
+
+    nextBtn.addEventListener("click", () => {
+      const newIndex = (currentIndex + 1) % slides.length;
+      goToSlide(newIndex);
+    });
+
+    /* ===== Swipe Support ===== */
+    let startX = 0;
+
+    track.addEventListener("touchstart", e => {
+      startX = e.touches[0].clientX;
+    });
+
+    track.addEventListener("touchend", e => {
+      const endX = e.changedTouches[0].clientX;
+      const diff = endX - startX;
+
+      if (Math.abs(diff) > 50) {
+        if (diff > 0) {
+          prevBtn.click();
+        } else {
+          nextBtn.click();
+        }
+      }
+    });
+  });
+});
+</script>
 
 </body>
 </html>
