@@ -179,10 +179,12 @@ h2 {
 }
 
 .hero-banner {
-  width: 60vw;
-  height: 55vh;
+  width: 100%;
+  max-width:100%;
+  height: auto;
+  min-height:40vh;
   background: url('../assets/images/projects/project1/herobanner.png') center/cover no-repeat;
-  display: flex;
+  display: block;
 }
 
 .under-construction-img {
