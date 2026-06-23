@@ -50,24 +50,23 @@
 
     <!-- 1. Hero Banner -->
     <header class="project-hero">
-      <h1 class="project-title">Project Title</h1>
-      <img src="../assets/images/site/Under-Construction-Cloud-WITH-TEXT.png" alt="Under Construction" class="hero-diagram under-construction-img">
+      <h1 class="project-title">Hub-and-Spoke Virtual Network Architecture</h1>
+      <img src="../assets/images/projects/project1/growtika-TKAg3WignSw-unsplash.jpg" alt="High‑level hub‑and‑spoke network architecture showing centralized management in the hub and isolated workloads in spoke VNets." class="hero-banner">
     </header>
 
     <!-- 2. Overview -->
     <section class="project-section" id="overview">
       <h2>Overview</h2>
       <p>
-        
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ex metus, iaculis mollis varius id, accumsan sed nisi. Pellentesque eget euismod nulla. In non lorem nisl. Integer tortor est, eleifend in risus a, congue euismod ligula. Sed consectetur nisi nec lacus dignissim, a fermentum urna laoreet. Vivamus fringilla euismod odio vel venenatis. Pellentesque orci massa, placerat nec enim non, laoreet mattis dolor. Cras tortor elit, luctus vel convallis a, convallis sed nibh. Sed molestie lacinia turpis. In eu odio porta risus pharetra condimentum ac vitae augue. Mauris a semper odio, non sagittis odio. Morbi sit amet justo non lorem aliquam suscipit id at urna. Duis in nibh in sapien consequat mattis sit amet ac felis. Aliquam erat volutpat. Vestibulum egestas, massa quis aliquet aliquet, risus nulla viverra turpis, interdum auctor lorem est id erat. Nulla pulvinar risus vel erat auctor, non aliquet neque porttitor. 
+        I built a secure Hub‑and‑Spoke network architecture in Microsoft Azure to demonstrate my ability to design cloud networks that are scalable, well‑segmented, and aligned with enterprise best practices. The hub hosts shared services like Bastion, DNS, and peerings, while each spoke contains isolated workloads with tightly governed traffic paths.
+        This project highlights my knowledge of cloud networking, routing design, Zero Trust principles, and operational governance. It also shows that I can build environments that are secure, predictable, and ready for real‑world workloads.
       </p>
     </section>
 
     <!-- 3. Architecture Diagram (Full Width) -->
     <section class="project-section" id="architecture">
       <h2>Architecture Diagram</h2>
-      <img src="../assets/images/site/Under-Construction-Cloud-WITH-TEXT.png" alt="Architecture Diagram" class="full-diagram architecture-placeholder">
+      <img src="../assets/images/projects/project1/Hub-and-spoke Architecture Diagram WITH BACKGROUND.png" alt="Hub-Spoke Architecture Diagram" class="architecture-diagram">
     </section>
 
 <section class="project-section" id="screenshots">
@@ -77,14 +76,53 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ex metus, iaculis 
     <button class="carousel-btn prev" data-carousel-prev>❮</button>
 
     <div class="carousel-track" data-carousel-track>
-      <div class="carousel-slide active" data-caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
-        <img src="../assets/images/site/Under-Construction-Cloud-WITH-TEXT.png" alt="Project Screenshot">
+      <div class="carousel-slide active" data-caption="Network Watcher enabled in East US to support topology, routing, and connectivity diagnostics.">
+        <img src="../assets/images\projects\project1\NetworkWatcher_eastus ENABLED.png" alt="Network Watcher enabled in East US to support topology, routing, and connectivity diagnostics.">
       </div>
-      <div class="carousel-slide" data-caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
-        <img src="../assets/images/site/Under-Construction-Cloud-WITH-TEXT.png" alt="Project Screenshot">
+      <div class="carousel-slide" data-caption="Initial topology view showing VNets before peering — no cross‑VNet connectivity yet.">
+        <img src="../assets/images\projects\project1\Network Watcher Topology NOT PEERED.png" alt="Initial topology view showing VNets before peering — no cross‑VNet connectivity yet.">
       </div>
-            <div class="carousel-slide" data-caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
-        <img src="../assets/images/site/Under-Construction-Cloud-WITH-TEXT.png" alt="Project Screenshot">
+            <div class="carousel-slide" data-caption="Updated topology after configuring VNet peering between hub and spokes.">
+        <img src="../assets/images\projects\project1\Network Topology - Peered.png" alt="Updated topology after configuring VNet peering between hub and spokes.">
+      </div>
+      <div class="carousel-slide" data-caption="Verification of active VNet peerings confirming bidirectional connectivity across the environment.">
+        <img src="../assets/images\projects\project1\Connected Peerings.png" alt="Verification of active VNet peerings confirming bidirectional connectivity across the environment.">
+      </div>
+      <div class="carousel-slide" data-caption="Subnet segmentation within hub‑vnet, including Management, Shared Services, and AzureBastionSubnet.">
+        <img src="../assets/images\projects\project1\hub-vnet with subnets- Microsoft Azure.png" alt="Subnet segmentation within hub‑vnet, including Management, Shared Services, and AzureBastionSubnet.">
+      </div>
+      <div class="carousel-slide" data-caption="Subnet layout for spoke1‑vnet hosting the web and application tiers.">
+        <img src="../assets/images\projects\project1\spoke1-vnet.png" alt="Subnet layout for spoke1‑vnet hosting the web and application tiers.">
+      </div>
+      <div class="carousel-slide" data-caption="Subnet layout for spoke2‑vnet hosting the data tier.">
+        <img src="../assets/images\projects\project1\spoke2-vnet.png" alt="Subnet layout for spoke2‑vnet hosting the data tier.">
+      </div>
+      <div class="carousel-slide" data-caption="NSG assignment for the ManagementSubnet enforcing restricted administrative access.">
+        <img src="../assets/images\projects\project1\nsg-hub-management NSG rules.png" alt="NSG assignment for the ManagementSubnet enforcing restricted administrative access.">
+      </div>
+      <div class="carousel-slide" data-caption="Application subnet NSG rules permitting only required internal communication paths.">
+        <img src="../assets/images\projects\project1\nsg-spoke1-app NSG rules.png" alt="Application subnet NSG rules permitting only required internal communication paths.">
+      </div>
+      <div class="carousel-slide" data-caption="NSG rules for the spoke1 web subnet allowing HTTP/HTTPS and hub‑initiated SSH.">
+        <img src="../assets/images\projects\project1\nsg-spoke1-web NSG rules.png" alt="NSG rules for the spoke1 web subnet allowing HTTP/HTTPS and hub‑initiated SSH.">
+      </div>
+      <div class="carousel-slide" data-caption="Data tier NSG rules enforcing strict inbound controls and limiting access to approved sources.">
+        <img src="../assets/images\projects\project1\nsg-spoke2-web NSG rules.png" alt="Data tier NSG rules enforcing strict inbound controls and limiting access to approved sources.">
+      </div>
+      <div class="carousel-slide" data-caption="Effective NSG rules for vm‑spoke1‑web showing the final combined inbound and outbound permissions.">
+        <img src="../assets/images\projects\project1\EFFECTIVESECURITYRULES_effective NSG rules for vm-spoke1-web.jpg" alt="Effective NSG rules for vm‑spoke1‑web showing the final combined inbound and outbound permissions.">
+      </div>
+      <div class="carousel-slide" data-caption="IP Flow Verify confirming SSH traffic from the hub to the spoke1 web VM is allowed.">
+        <img src="../assets/images\projects\project1\IPFLOW_SSH from hub to spoke1 web VM on port 22 .jpg" alt="IP Flow Verify confirming SSH traffic from the hub to the spoke1 web VM is allowed.">
+      </div>
+      <div class="carousel-slide" data-caption="IP Flow Verify confirming inbound HTTP traffic from the internet is permitted.">
+        <img src="../assets/images\projects\project1\IPFLOW_HTTP from internet to spoke1 web VM on port 80 .jpg" alt="IP Flow Verify confirming inbound HTTP traffic from the internet is permitted.">
+      </div>
+      <div class="carousel-slide" data-caption="IP Flow Verify showing RDP traffic from the internet is correctly denied by NSG rules.">
+        <img src="../assets/images\projects\project1\IPFLOW_RDP from internet to spoke1 web VM on port 3389.jpg" alt="IP Flow Verify showing RDP traffic from the internet is correctly denied by NSG rules.">
+      </div>
+      <div class="carousel-slide" data-caption="Secure SSH connection to vm‑hub‑mgmt via Azure Bastion, successfully authenticating with an SSH key and launching an Ubuntu 24.04 LTS session. The output confirms system health, resource usage, and private IP assignment (10.0.2.4) within the hub VNet.">
+        <img src="../assets/images\projects\project1\AzureBastionSSHSuccessfulconnection.png" alt="Secure SSH connection to vm‑hub‑mgmt via Azure Bastion, successfully authenticating with an SSH key and launching an Ubuntu 24.04 LTS session. The output confirms system health, resource usage, and private IP assignment (10.0.2.4) within the hub VNet.">
       </div>
     </div>
 
@@ -101,11 +139,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ex metus, iaculis 
     <section class="project-section" id="methodologies">
       <h2>Methodologies Used</h2>
       <div class="service-badges">
-        <span class="badge">Lorem ipsum</span>
-        <span class="badge">Lorem ipsum</span>
-        <span class="badge">Lorem ipsum</span>
-        <span class="badge">Lorem ipsum</span>
-        <span class="badge">Lorem ipsum</span>
+        <span class="badge"><p>Hub-and-spoke Topology Design</p></span>
+        <span class="badge"><p>Cost Optimization</p></span>
+        <span class="badge"><p>Network Segmentation</p></span>
+        <span class="badge"><p>Infrastructure as Code (IaC)</p></span>
+        <span class="badge"><p>Bastion Access</p></span>
+        <span class="badge"><p>Route Architecture</p></span>
+        <span class="badge"><p>Traffic Flow Modeling</p></span>
       </div>
     </section>
 
@@ -113,19 +153,166 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ex metus, iaculis 
     <section class="project-section" id="walkthrough">
       <h2>Step-by-Step Walkthrough</h2>
 
-      <h3>1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-      <pre><code>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam iaculis condimentum urna eget varius.
-      </code></pre>
+      <h3>1. Create the Resource Group</h3>
+      <ul>
+        <li>Create a new resource group in the same region for all project resources.</li>
+      </ul>
 
-      <img src="../assets/images/site/Under-Construction-Cloud-WITH-TEXT.png" alt="Project Screenshot" class="screenshot screenshot-placeholder">
+      <h3>2. Build the Virtual Networks</h3>
+      <ul>
+        <li>Create hub-vnet (10.0.0.0/16) with:</li>
+        <ul>
+          <li>SharedServicesSubnet (10.0.1.0/24)</li>
+          <li>ManagementSubnet (10.0.2.0/24)</li>
+          <li>AzureBastionSubnet (10.0.3.0/26)</li>
+        </ul>
+      </ul>
 
-      <h3>2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-      <pre><code>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam iaculis condimentum urna eget varius.
-      </code></pre>
+      <img src="../assets/images\projects\project1\hub-vnet with subnets- Microsoft Azure.png" class="project-screenshot" alt="hubvnetwithsubnets">
 
-      <img src="../assets/images/site/Under-Construction-Cloud-WITH-TEXT.png" alt="Project Screenshot" class="screenshot screenshot-placeholder">
+          <ul>
+          <li>Create spoke1-vnet (10.1.0.0/16) with:</li>
+            <ul>
+              <li>WebSubnet (10.1.1.0/24)</li>
+              <li>AppSubnet (10.1.2.0/24)</li>
+            </ul>
+          </ul>
+
+          <img src="../assets/images\projects\project1\spoke1-vnet.png" class="project-screenshot" alt="spoke1vnetwithsubnets">
+
+               <ul>
+                <li>Create spoke2-vnet (10.2.0.0/16) with:</li>
+                  <ul>
+                    <li>WebSubnet (10.2.1.0/24)</li>
+                    <li>DataSubnet (10.2.2.0/24)</li>
+                  </ul>
+                </ul>
+
+                <img src="../assets/images\projects\project1\spoke2-vnet.png" class="project-screenshot" alt="spoke2vnetwithsubnets">
+
+              <h3>3. Configure Hub‑Spoke VNet Peering</h3>
+              <ul>
+                <li>Peer hub ↔ spoke1 (two connections).</li>
+                <li>Peer hub ↔ spoke2 (two connections).</li>
+                <li>Do not peer the spokes to each other.</li>
+              </ul>
+
+              <img src="../assets/images\projects\project1\Connected Peerings.png" class="project-screenshot" alt="connectedpeerings">
+
+                <h3>4. Create and Apply Network Security Groups</h3>
+                  <ul>
+                    <li>Create NSGs for:</li>
+                    <ul>
+                      <li>hub ManagementSubnet</li>
+                      <li>spoke1 WebSubnet</li>
+                      <li>spoke1 AppSubnet</li>
+                      <li>spoke2 WebSubnet</li>
+                    </ul>
+                    <li>Add rules to allow required HTTP/HTTPS/SSH traffic and deny all else.</li>
+                    <li>Associate each NSG with its corresponding subnet.</li>
+                  </ul>
+
+        <img src="../assets/images/projects/project1/nsg-hub-management NSG rules.png" class="project-screenshot" alt="hubmanagementNSG">
+
+        <img src="../assets/images/projects/project1/nsg-spoke1-web NSG rules.png" class="project-screenshot" alt="spoke1webNSG">
+
+        <img src="../assets/images/projects/project1/nsg-spoke1-app NSG rules.png" class="project-screenshot" alt="spoke1appNSG">
+
+        <img src="../assets/images/projects/project1/nsg-spoke2-web NSG rules.png" class="project-screenshot" alt="spoke2webNSG">
+
+                    <h3>5. Create a Route Table (UDR)</h3>
+                      <ul>
+                        <li>Create a route table for spoke1.</li>
+                        <li>Add a default route (0.0.0.0/0) pointing to a simulated NVA IP in the hub.</li>
+                        <li>Associate the route table with spoke1 WebSubnet.</li>
+                      </ul>
+
+                      <pre><code>
+{
+            "type": "Microsoft.Network/routeTables",
+            "apiVersion": "2025-05-01",
+            "name": "[parameters('routeTables_rt_spoke1_to_hub_name')]",
+            "location": "eastus",
+            "tags": {
+                "project": "portfolio-lab1"
+            },
+            "properties": {
+                "disableBgpRoutePropagation": false,
+                "routes": [
+                    {
+                        "name": "route-to-hub-nva",
+                        "id": "[resourceId('Microsoft.Network/routeTables/routes', parameters('routeTables_rt_spoke1_to_hub_name'), 'route-to-hub-nva')]",
+                        "properties": {
+                            "addressPrefix": "0.0.0.0/0",
+                            "nextHopType": "VirtualAppliance",
+                            "nextHopIpAddress": "10.0.1.4"
+                        }
+                    }
+                ]
+            }
+        },
+</code></pre>
+
+                      <h3>6. Configure Private DNS</h3>
+                      <ul>
+                        <li>Link:</li>
+                          <ul>
+                            <li>hub-vnet (auto‑registration enabled)</li>
+                            <li>spoke1-vnet (resolution only)</li>
+                            <li>spoke2-vnet (resolution only)</li>
+                          </ul>
+                      </ul>
+
+              <img src="../assets/images\projects\project1\Private DNS Zone linked to 3 VNets- Microsoft Azure.png"class="project-screenshot" alt="privatednszonelinked">
+
+                          <h3>7. Deploy Test VMs</h3>
+                            <ul>
+                              <li>Deploy two B1s Ubuntu VMs:</li>
+                                <ul>
+                                  <li>vm-hub-mgmt in hub ManagementSubnet</li>
+                                  <li>vm-spoke1-web in spoke1 WebSubnet</li>
+                                </ul>
+                            </ul>
+                                <ul>
+                                  <li>No public IPs; use Bastion Developer SKU for access.</li>
+                                </ul>
+                                  <ul>
+                                    <li>Enable auto‑shutdown immediately.</li>
+                                  </ul>
+
+                                  <img src="../assets/images\projects\project1\AzureBastionSSHSuccessfulconnection.png" class="project-screenshot" alt="AzureBastionSSHsuccessfulconnection">
+
+                            <h3>8. Validate Connectivity</h3>
+                              <ul>
+                                <li>From vm-hub-mgmt:</li>
+                                  <ul>
+                                    <li>Ping vm-spoke1-web (success).</li>
+                                    <li>SSH into vm-spoke1-web.</li>
+                                    <li>Resolve DNS names via Private DNS.</li>
+                                    <li>Attempt spoke‑to‑spoke ping (expected fail).</li>
+                                  </ul>
+                              </ul>
+
+                              <img src="../assets/images\projects\project1\IPFLOW_RDP from internet to spoke1 web VM on port 3389.jpg" class="project-screenshot" alt="intetionaldenialofaccessonport3389">
+
+                                <ul>
+                                <li>Use Network Watcher tools:</li>
+                                    <ul>
+                                      <li>IP Flow Verify</li>
+                                      <li>Next Hop</li>
+                                      <li>Effective Security Rules</li>
+                                    </ul>
+                                </ul>
+
+                                <img src="../assets/images\projects\project1\IPFLOW_SSH from hub to spoke1 web VM on port 22 .jpg" class="project-screenshot" alt="accesssuccessfulonport22">
+
+
+                                <h3>9. Tear Down Temporary Resources</h3>
+                                  <ul>
+                                    <li>Delete both VMs.</li>
+                                    <li>Delete orphaned disks and NICs.</li>
+                                    <li>Keep the network fabric (VNets, NSGs, peering, DNS).</li>
+                                  </ul>
 
       <!-- Add as many steps as you want -->
     </section>
@@ -133,27 +320,61 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam iaculis condimen
     <!-- 6. Key Configurations -->
     <section class="project-section" id="configurations">
       <h2>Key Configurations</h2>
-      <pre><code>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam iaculis condimentum urna eget varius.
-      </code></pre>
+      <ul>
+    <li><strong>VNet Peering:</strong> Hub-to-spoke, non-transitive configuration.</li>
+    <li><strong>User-Defined Routes:</strong> Custom route tables enforcing traffic through the hub.</li>
+    <li><strong>Network Security Groups:</strong> Least-privilege inbound/outbound rules.</li>
+    <li><strong>Private DNS:</strong> Centralized name resolution via hub DNS servers.</li>
+    <li><strong>Azure Bastion:</strong> Secure, agentless admin access without public IPs.</li>
+    <li><strong>IP Addressing Plan:</strong>/16 VNets with /24 subnets for scalable, non‑overlapping segmentation.</li>
+      </ul>
     </section>
 
     <!-- 7. Challenges & Solutions -->
     <section class="project-section" id="challenges">
       <h2>Challenges & Solutions</h2>
       <ul>
-        <li><strong>Challenge:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam iaculis condimentum urna eget varius. In posuere lectus sollicitudin, faucibus velit et, maximus lorem. Nam non neque in lorem. </li>
-        <li><strong>Solution:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam iaculis condimentum urna eget varius. In posuere lectus sollicitudin, faucibus velit et, maximus lorem. Nam non neque in lorem. </li>
+        <li><strong>Challenge:</strong> B-series SKU VMs are unavailable in East US region.</li>
+        <li><strong>Solution:</strong>  The most affordable VM series SKU available in East US was the D-series SKU. I was bound to the East US region, as the networking services within Azure are region-locked. This taught me to always check regional SKU availability before planning deployments.</li>
       </ul>
+        <ul>
+        <li><strong>Challenge:</strong> Bastion Developer SKU is unavailable in East US region.</li>
+        <li><strong>Solution:</strong> I upgraded to the Bastion Basic SKU but was unable to connect to my VMs because the RDP session connection was unstable. I tried accessing my VM using Bastion on both Mozilla FireFox and Google Chrome, as well as both browsers on Incognito mode. I cleared my browser cookies and reset my router- none of this worked. I decided to upgrade to Bastion Standard SKU to use the Native Client SHH capability, which resolved the issue.</li>
+        </ul>
+          <ul>
+            <li><strong>Challenge:</strong> VMs were rebuilt multiple times.</li>
+            <li><strong>Solution:</strong> I had to return to this project more than once after sessions took me longer than I expected. In the future, I will use ARM templates (or Bicep) to ensure consistent, repeatable VM deployments and reduce rebuild time.</li>
+          </ul>
     </section>
 
     <!-- 8. Results & Metrics -->
     <section class="project-section" id="results">
       <h2>Results & Metrics</h2>
       <ul>
-        <li>Deployment time: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-        <li>Connectivity test: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-        <li>Policy compliance: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+        <li><strong>Hub‑to‑Spoke Connectivity: </strong>Successful ICMP and SSH communication from hub VM to spoke VM, confirming correct peering and NSG rules.</li>
+      </ul>
+        <ul>
+          <li><strong>Spoke Isolation: </strong>Spoke‑to‑spoke traffic intentionally failed, validating non‑transitive hub‑spoke design and proper segmentation.</li>
+        </ul>
+        <ul>
+          <li><strong>DNS Resolution: </strong>Private DNS zone resolved VM hostnames across all VNets, demonstrating centralized name resolution.</li>
+        </ul>
+        <ul>
+        <li><strong>Effective Routing: </strong>Next Hop analysis showed traffic flowing through hub as expected; UDR applied correctly to spoke1 WebSubnet.</li>
+        </ul>
+        <ul>
+        <li><strong>Zero Public Exposure: </strong>All VMs accessed via Bastion Developer SKU with no public IPs, reducing attack surface to zero.</li>
+        </ul>
+        <ul>
+        <li><strong>Cost Efficiency: </strong>Total project cost remained under $1; all core components (VNets, NSGs, peering) incurred no ongoing charges.</li>
+        </ul>
+        <ul><li><strong>Security Enforcement:</strong> IP Flow Verify confirmed:
+          <ul>
+            <li>SSH from hub → allowed</li>
+            <li>HTTP from internet → allowed</li>
+            <li>RDP from internet → denied</li>
+          </ul>
+        </li>
       </ul>
     </section>
 
@@ -161,16 +382,29 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam iaculis condimen
     <section class="project-section" id="takeaways">
       <h2>Key Takeaways</h2>
       <ul>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+        <li><strong>Azure Resource Organization: </strong>I learned how to structure a small cloud environment using Resource Groups, VNets, subnets, and role‑appropriate naming conventions to keep everything clean, predictable, and scalable.</li>
       </ul>
+        <ul>
+          <li><strong>Secure Access: </strong>Implementing Azure Bastion reinforced the importance of eliminating public RDP exposure and using platform-managed access for hardened entry into VMs.</li>
+        </ul>
+          <ul>
+            <li><strong>Network Segmentation: </strong>Designing subnets with clear purposes (management, workload, jump host) helped me understand how segmentation reduces blast radius and improves operational clarity.</li>
+          </ul>
+            <ul>
+              <li><strong>Operational Reliability: </strong>Rebuilding VMs while preserving the network fabric taught me how to maintain stability, avoid configuration drift, and recover cleanly without breaking dependencies.</li>
+            </ul>
+              <ul>
+                <li><strong>Identity‑Aligned VM Access: </strong>Instead of relying on local admin accounts or exposing RDP, I used Azure Bastion and my Entra ID identity to access VMs. This reinforced the shift toward identity‑based administration even in small environments, without needing full RBAC role design for this project.</li>
+              </ul>
+                <ul>
+                  <li><strong>Documentation Discipline: </strong>Capturing architecture, configuration, and validation steps strengthened my ability to communicate technical decisions clearly.</li>
+                </ul>
     </section>
 
     <!-- 10. GitHub Link -->
-    <section class="project-section" id="github">
-      <a href="https://github.com/Little-Pink-Cloud" class="github-button">View on GitHub</a>
-    </section>
+     <div class="github-button-container">
+      <a class="github-button" href="https://github.com/Little-Pink-Cloud/LittlePinkCloud-Static-Site">View on GitHub</a>
+    </div>
   </div>
 
   <script>

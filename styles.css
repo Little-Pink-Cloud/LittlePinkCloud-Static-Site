@@ -368,7 +368,6 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
   text-decoration: none; /* removes underline */
   color: rgba(159, 207, 255, 0.9);
 }
@@ -395,6 +394,8 @@ a {
   max-width: 900px;
   margin: 0 auto;
   padding-bottom: 4rem;
+  text-align: left;
+  align-items: flex-start;
 }
 
 .back-link {
@@ -423,20 +424,9 @@ a {
 .project-section h2 {
   color: #cfe6ff;
   text-shadow: 0 0 8px rgba(159, 207, 255, 0.9);
+  text-align: left
 }
 
-.service-badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-}
-
-.badge {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 6px 12px;
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
 
 .screenshot, .full-diagram {
   width: 100%;
@@ -445,16 +435,6 @@ a {
   box-shadow: 0 0 20px rgba(120, 180, 255, 0.4);
 }
 
-.github-button {
-  display: inline-block;
-  padding: 10px 20px;
-  background: rgba(120, 180, 255, 0.2);
-  border: 1px solid rgba(120, 180, 255, 0.4);
-  border-radius: 8px;
-  color: #e4f0ff;
-  text-decoration: none;
-  text-shadow: 0 0 6px rgba(150, 200, 255, 0.8);
-}
 
 .project-nav {
   display: flex;
@@ -465,33 +445,6 @@ a {
 .nav-link {
   color: #d4e7ff;
   text-decoration: none;
-}
-
-/* Project Page Code Blocks Styled Like Content Box */
-.project-section pre {
-  background-color: rgba(6, 63, 86, 1);
-    background: radial-gradient(
-    circle at top,
-    rgba(40, 60, 120, 0.45),
-    rgba(5, 10, 30, 0.9)
-  );
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(20px);
-
-  padding: 1.2rem 1.4rem;
-  border-radius: 12px;
-  margin: 1.2rem 0;
-
-  box-shadow: 0 0 18px rgba(180, 200, 255, 0.25);
-  overflow-x: auto;
-}
-
-.project-section code {
-  color: #e8f1ff; /* soft cloud-blue text */
-  font-family: Consolas, Monaco, "Courier New", monospace;
-  font-size: 0.95rem;
-  color: #e4f0ff;
-
 }
 
 .project-nav,
