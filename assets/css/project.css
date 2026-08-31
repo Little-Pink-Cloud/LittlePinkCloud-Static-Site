@@ -179,11 +179,20 @@ h2 {
 }
 
 .hero-banner {
-  width: 100%;
+  width: 80%;
   max-width:100%;
   height: auto;
   min-height:40vh;
+  margin: 2rem auto;
   background: url('../assets/images/projects/project1/herobanner.png') center/cover no-repeat;
+  display: block;
+}
+
+.hero-banner.project2 {
+  width: 70%;
+  max-width: 800px;
+  height: auto;
+  margin: 2rem auto;
   display: block;
 }
 

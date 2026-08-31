@@ -1,0 +1,20 @@
+{
+    "id": "REDACTED",
+    "properties": {
+        "roleName": "Custom Backup Reader",
+        "description": "",
+        "assignableScopes": [
+            "/REDACTED"
+        ],
+        "permissions": [
+            {
+                "actions": [
+                    "Microsoft.RecoveryServices/*/read"
+                ],
+                "notActions": [],
+                "dataActions": [],
+                "notDataActions": []
+            }
+        ]
+    }
+}
