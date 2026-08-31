@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="../assets/images/site/favicon.ico">
+  <title>Entra ID & Access Management </title>
+
+  <!-- Global site styles -->
+  <link rel="stylesheet" href="../styles.css">
+
+  <!-- Project-specific overrides -->
+  <link rel="stylesheet" href="../assets/css/project.css">
+
+  <style>
+  html, body {
+    overflow: auto !important;
+    height: auto !important;
+  }
+</style>
+</head>
+
+<body>
+
+  <div class="page project-page">
+
+    <!-- Floating Navigation Toggle + Utility Bar -->
+<div class="floating-nav-tools">
+    <button class="nav-icon" onclick="scrollToTop()" data-label="Scroll to Top">↑</button>
+  <button id="navToggle" class="nav-icon" data-label="Toggle Navigation">☰</button>
+  <a href="../index.html" class="nav-icon" data-label="Back to Site">⌂</a>
+  <button class="nav-icon" onclick="scrollToBottom()" data-label="Scroll to Bottom">↓</button>
+</div>
+
+<!-- Celestial Floating Navigation Panel -->
+<nav id="floatingNav" class="floating-nav">
+  <h3 class="nav-title">Project Navigation</h3>
+  <ul>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#architecture">Architecture Diagram</a></li>
+    <li><a href="#screenshots">Project Screenshots</a></li>
+    <li><a href="#methodologies">Methodologies Used</a></li>
+    <li><a href="#walkthrough">Step-by-Step Walkthrough</a></li>
+    <li><a href="#configurations">Key Configurations</a></li>
+    <li><a href="#challenges">Challenges & Solutions</a></li>
+    <li><a href="#results">Results & Metrics</a></li>
+    <li><a href="#takeaways">Key Takeaways</a></li>
+    <li><a href="#github">View Project on GitHub</a></li>
+  </ul>
+</nav>
+
+    <!-- 1. Hero Banner -->
+    <header class="project-hero">
+      <h1 class="project-title">Entra ID & Access Management</h1>
+      <img src="../assets/images/projects/project2/AccessAdministrationHeroBanner.png" alt="Entra ID & Access Management project banner" class="hero-banner project2">
+    </header>
+
+    <!-- 2. Overview -->
+    <section class="project-section" id="overview">
+      <h2>Overview</h2>
+      <p>
+        This project builds a simulated enterprise identity governance environment inside Microsoft Entra ID. It demonstrates how organizations manage identities, secure privileged access, enforce Conditional Access, automate group membership, and apply least‑privilege principles at scale.
+      </p>
+    </section>
+
+    <!-- 3. Architecture Diagram (Full Width) -->
+    <section class="project-section" id="architecture">
+      <h2>Architecture Diagram</h2>
+      <img src="../assets/images/projects/project2/EntraIDandAccessManagementArchitectureDiagram.png" alt="Architecture Diagram for Entra ID and Access Management Lab" class="architecture-diagram">
+    </section>
+
+<section class="project-section" id="screenshots">
+  <h2>Project Screenshots</h2>
+
+  <div class="carousel" data-carousel>
+    <button class="carousel-btn prev" data-carousel-prev>❮</button>
+
+    <div class="carousel-track" data-carousel-track>
+      <div class="carousel-slide active" data-caption="Sign‑in logs filtered for an admin user showing MFA enforcement under Conditional Access.">
+  <img src="../assets/images/projects/project2/SignInLogsTable.png" alt="Azure Entra ID sign‑in logs table filtered by user and Conditional Access status.">
+</div>
+
+<div class="carousel-slide" data-caption="Privileged Identity Management audit history displaying eligible‑to‑active role activation events.">
+  <img src="../assets/images/projects/project2/PIMAuditLogHistory.png" alt="Microsoft Entra ID PIM audit log history showing role activation entries.">
+</div>
+
+<div class="carousel-slide" data-caption="Dynamic group membership populated automatically based on department attribute.">
+  <img src="../assets/images/projects/project2/DynamicGroupMembership.png" alt="Dynamic group membership view showing HR users added via rule evaluation.">
+</div>
+
+<div class="carousel-slide" data-caption="Custom Backup Reader role assigned to a group.">
+  <img src="../assets/images/projects/project2/CustomRoleAssignment.png" alt="Azure portal IAM screen showing custom role assignment to security group.">
+</div>
+
+<div class="carousel-slide" data-caption="All users list displaying admin, staff, and service accounts created for the lab.">
+  <img src="../assets/images/projects/project2/AllUsersList.png" alt="Microsoft Entra ID user directory list with admin and standard accounts.">
+</div>
+
+<div class="carousel-slide" data-caption="Detailed user profile showing department, job title, and usage location attributes.">
+  <img src="../assets/images/projects/project2/DetailedUserProfile.png" alt="User profile pane in Entra ID displaying identity details and properties.">
+</div>
+
+<div class="carousel-slide" data-caption="Dynamic group overview panel showing membership type and evaluation status.">
+  <img src="../assets/images/projects/project2/DynamicGroupOverview.png" alt="Azure Entra ID group overview for dynamic membership configuration.">
+</div>
+
+<div class="carousel-slide" data-caption="Dynamic group rule syntax defining department‑based membership criteria.">
+  <img src="../assets/images/projects/project2/DynamicMembershipRules.png" alt="Rule editor window showing expression (user.department -eq 'Human Resources').">
+</div>
+
+<div class="carousel-slide" data-caption="Administrative Unit overview displaying two AU containers.">
+  <img src="../assets/images/projects/project2/AUOverview.png" alt="Microsoft Entra ID Administrative Units overview screen with two units listed.">
+</div>
+
+<div class="carousel-slide" data-caption="Scoped User Administrator role assignment within an AU.">
+  <img src="../assets/images/projects/project2/AUScopedRoleAssignment.png" alt="Administrative Unit role assignment pane showing scoped permissions.">
+</div>
+
+<div class="carousel-slide" data-caption="IAM role assignments filtered by group to display RBAC mapping.">
+  <img src="../assets/images/projects/project2/RoleAssignmentsFilteredByGroup.png" alt="Azure subscription IAM view filtered by security group assignments.">
+</div>
+
+<div class="carousel-slide" data-caption="Contributor role assignments for a group.">
+  <img src="../assets/images/projects/project2/AzureRoleAssignments_contributors.png" alt="Azure IAM role assignment list showing Contributor permissions.">
+</div>
+
+<div class="carousel-slide" data-caption="Reader role assignments for another group.">
+  <img src="../assets/images/projects/project2/AzureRoleAssignments_readers.png" alt="Azure IAM role assignment list showing Reader permissions.">
+</div>
+
+<div class="carousel-slide" data-caption="Custom Backup Reader role permissions displaying Microsoft.RecoveryServices/*/read.">
+  <img src="../assets/images/projects/project2/CustomRolePermissions.png" alt="Custom role definition pane showing read‑only permissions for Recovery Services.">
+</div>
+
+<div class="carousel-slide" data-caption="Conditional Access policy requiring MFA for admin roles enabled.">
+  <img src="../assets/images/projects/project2/ConditionalAccessPolicyMFAEnabledforAdmins.png" alt="Conditional Access policy list showing CA‑Require‑MFA‑Admins enabled status.">
+</div>
+
+<div class="carousel-slide" data-caption="Detailed policy configuration for CA‑Require‑MFA‑Admins showing targeted roles and grant controls.">
+  <img src="../assets/images/projects/project2/ConditionalAccessPolicyDetails_CA-Require-MFA-Admins.png" alt="Conditional Access policy details pane for MFA requirement on admin roles.">
+</div>
+
+<div class="carousel-slide" data-caption="Detailed policy configuration for CA‑Block‑Legacy‑Auth blocking legacy clients.">
+  <img src="../assets/images/projects/project2/ConditionalAccessPolicyDetails_CA-Block-Legacy-Auth.png" alt="Conditional Access policy details pane for blocking legacy authentication clients.">
+</div>
+
+<div class="carousel-slide" data-caption="Global Administrator active assignment displayed after PIM activation.">
+  <img src="../assets/images/projects/project2/GlobalAdministratorActiveAssignment.png" alt="PIM dashboard showing Global Administrator role active status.">
+</div>
+
+<div class="carousel-slide" data-caption="List of all Conditional Access policies including MFA and legacy auth block.">
+  <img src="../assets/images/projects/project2/AllConditionalAccessPolicies.png" alt="Conditional Access policy overview list showing multiple configured policies.">
+</div>
+
+<div class="carousel-slide" data-caption="Global Administrator eligible assignment record within PIM settings.">
+  <img src="../assets/images/projects/project2/GlobalAdministratorEligibleAssignment.png" alt="Privileged Identity Management eligible assignment screen for Global Administrator.">
+</div>
+
+<div class="carousel-slide" data-caption="PIM activation screen prompting for MFA and justification before role activation.">
+  <img src="../assets/images/projects/project2/GlobalAdministratorActivationScreen.png" alt="Privileged Identity Management activation dialog for Global Administrator role.">
+</div>
+
+    </div>
+
+    <button class="carousel-btn next" data-carousel-next>❯</button>
+
+    <div class="carousel-dots" data-carousel-dots></div>
+
+    <div class="carousel-caption-below" data-carousel-caption></div>
+
+  </div>
+</section>
+
+    <!-- 4. Methodologies Used -->
+    <section class="project-section" id="methodologies">
+      <h2>Methodologies Used</h2>
+      <div class="service-badges">
+        <span class="badge"><p>Identity Lifecycle Management</p></span>
+        <span class="badge"><p>Group‑Based RBAC</p></span>
+        <span class="badge"><p>Dynamic Group Automation</p></span>
+        <span class="badge"><p>Conditional Access Enforcement</p></span>
+        <span class="badge"><p>Privileged Identity Management (PIM)</p></span>
+        <span class="badge"><p>Custom Role Design</p></span>
+        <span class="badge"><p>Audit & Sign‑In Log Analysis</p></span>
+      </div>
+    </section>
+
+    <!-- 5. Step-by-Step Walkthrough -->
+    <section class="project-section" id="walkthrough">
+      <h2>Step-by-Step Walkthrough</h2>
+
+      <p><strong>NOTE: The identities used in this project are intentionally generic. The actual identities I used in this lab- along with any other sensitive identifiers, have been redacted.</strong></p>
+
+      <h3>1. Pre‑build Setup</h3>
+      <p>Prepare the tenant, permissions, licensing, and naming conventions for the identity governance lab.</p>
+      <ul>
+        <li>Confirm you are in the correct Microsoft Entra ID tenant.</li>
+        <li>Ensure your main account is a <strong>Global Administrator</strong> or <strong>Role Administrator.</strong></li>
+        <li>Enable the Entra ID P2 trial under Licenses → All products.</li>
+        <li>Assign P2 to your main admin, at least one test admin, and optionally one standard user.</li>
+        <li>Apply an enterprise‑style naming convention (e.g. Admin‑Account‑01, HR‑User‑01).</li>
+      </ul>
+
+      <h3>2. Create Core Users</h3>
+      <p>Build the foundational identity set representing admins, staff, and service accounts.</p>
+      <ul>
+        <li>Navigate to Entra ID → Users → New user.</li>
+        <li>Create:</li>
+        <ul>
+          <li>Admin‑Account‑01 (Global Administrator)</li>
+          <li>Security‑Admin‑Account (Security Administrator)</li>
+          <li>HR‑User‑01 (HR staff)</li>
+          <li>IT‑User‑01 (IT staff)</li>
+          <li>Automation‑Service‑Account (Service account)</li>
+        </ul>
+        <li>Set usage location, department, and job title for each user.</li>
+        <li>Enforce strong password settings.</li>
+      </ul>
+
+      <img src="../assets/images/projects/project2/AllUsersList.png" class="project-screenshot">
+      <img src="../assets/images/projects/project2/DetailedUserProfile.png" class="project-screenshot">
+
+              <h3>3. Create Security and Dynamic Groups</h3>
+              <p>Organize users into static and dynamic groups to support RBAC and automation.</p>
+              <ul>
+                <li>Go to Entra ID → Groups → New group.</li>
+              </ul>
+                  <p>Static Groups:</p>
+                    <ul>
+                      <li>HR‑App‑Users‑Group → add HR‑User‑01</li>
+                      <li>IT‑Tools‑Users‑Group → add IT‑User‑01</li>
+                    </ul>
+                      <p>Dynamic Group:</p>
+                        <ul>
+                          <li>Name: HR‑Department‑Dynamic‑Group</li>
+                          <li>Membership type: Dynamic user</li>
+                          <li>Rule:</li>
+                          <pre><code>(user.department -eq "Human Resources")</code>
+                        </ul>
+
+              <img src="../assets/images/projects/project2/DynamicGroupOverview.png" class="project-screenshot" alt="Dynamic Group Overview">
+              <img src="../assets/images/projects/project2/DynamicGroupMembership.png" class="project-screenshot" alt="Dynamic Group Membership">
+
+                <h3>4. Configure Administrative Units</h3>
+                <p>Scope administration using Administrative Units for HR and IT.</p>
+                  <ul>
+                    <li>Navigate to Entra ID → Administrative units → Add.</li>
+                    <li>Create AUs:</li>
+                      <ul>
+                      <li>HR‑Administrative‑Unit</li>
+                      <li>IT‑Administrative‑Unit</li>
+                      </ul>
+                    <li>Assign Security‑Admin‑Account as User Administrator scoped to the appropriate AU.</li>
+                  </ul>
+
+        <img src="../assets/images/projects/project2/AUOverview.png" class="project-screenshot" alt="AU Overview">
+
+        <img src="../assets/images/projects/project2/AUScopedRoleAssignment.png" class="project-screenshot" alt="AU Scoped Role Assignment">
+
+                    <h3>5. Assign Built‑in RBAC Roles via Groups</h3>
+                    <p>Use group‑based RBAC to assign Reader and Contributor roles at the subscription level.</p>
+                      <ul>
+                        <li>Go to Subscription → Access control (IAM).</li>
+                        <li>Assign roles:</li>
+                        <ul>
+                          <li>Reader → Read‑Only‑Admin‑Group</li>
+                          <li>Contributor → Subscription‑Owners‑Group</li>
+                        </ul>
+                        <li>Verify assignments in:</li>
+                          <ul>
+                            <li>IAM → Role assignments filtered by Group</li>
+                            <li>Group → Azure role assignments tab</li>
+                          </ul>
+                      </ul>
+
+                      <img src="../assets/images/projects/project2/RoleAssignmentsFilteredByGroup.png"class="project-screenshot" alt="Role Assignments Filtered by Group">
+
+                      <h3>6. Create and assign custom Backup Reader role</h3>
+                      <p>Design a custom role that grants read‑only access to Recovery Services Vaults.</p>
+                      <ul>
+                        <li>In IAM, select Add → Add custom role.</li>
+                        <li>Name the role Custom Backup Reader.</li>
+                        <li>Add permission:</li>
+                          <ul>
+                            <pre><code>Microsoft.RecoveryServices/*/read</code>
+                          </ul>
+                        <li>Assign the custom role to the Read‑Only‑Admin‑Group.</li>
+                      </ul>
+              <img src="../assets/images/projects/project2/CustomRolePermissions.png"class="project-screenshot" alt="Custom Role Permissions">
+              <img src="../assets/images/projects/project2/CustomRoleAssignment.png"class="project-screenshot" alt="Custom Role Assignment">
+
+                          <h3>7. Configure Conditional Access Policies</h3>
+                          <p>Enforce MFA for admin roles and block legacy authentication clients.</p>
+                          <p><strong>Policy 1 — CA‑Require‑MFA‑Admins</strong></p>
+                            <ul>
+                              <li>Navigate to Entra ID → Protection → Conditional Access → New policy.</li>
+                              <li>Users: Directory roles (Global Administrator, Privileged Role Administrator, Security Administrator).</li>
+                              <li>Cloud apps: All.</li>
+                              <li>Grant: Require MFA.</li>
+                              <li>Enable: On.</li>
+                              <li>Test by signing in as Admin‑Account‑01 and confirming MFA prompt.</li>
+                            </ul>
+                            <img src="../assets/images/projects/project2/ConditionalAccessPolicyDetails_CA-Require-MFA-Admins.png" class="project-screenshot" alt="Require MFA for Admins Policy">
+                            <img src="../assets/images/projects/project2/ConditionalAccessPolicyMFAEnabledforAdmins.png" class="project-screenshot" alt="MFA enabled for Admins Policy Enforced">
+                                
+                            <p><strong>Policy 2 — CA‑Block‑Legacy‑Auth</strong></p>
+                            <ul>
+                              <li>Users: All (except break‑glass accounts).</li>
+                              <li>Client apps: Legacy authentication clients.</li>
+                              <li>Grant: Block access.</li>
+                            </ul>
+                            <img src="../assets/images/projects/project2/ConditionalAccessPolicyDetails_CA-Block-Legacy-Auth.png" class="project-screenshot" alt="Legacy Authentication Policy Details">
+
+                            <h3>8. Configure Privileged Identity Management (PIM)</h3>
+                            <p>Implement just‑in‑time access for Global Administrator using PIM eligibility and activation.</p>
+                              <ul>
+                                <li>Go to Entra ID → Roles & administrators → PIM.</li>
+                                <li>For Global Administrator:</li>
+                                  <ul>
+                                    <li>Add Admin‑Account‑01 as Eligible.</li>
+                                    <li>Require MFA, justification, and a 1‑hour activation window.</li>
+                                  </ul>
+                                <li>Sign in as Admin‑Account‑01 → PIM → My roles → Activate.</li>
+                                <li>Provide justification, complete MFA, and confirm activation.</li>
+                              </ul>
+
+                              <img src="../assets/images/projects/project2/GlobalAdministratorEligibleAssignment.png" class="project-screenshot" alt="Global Admin Eligible Assignment">
+                              <img src="../assets/images/projects/project2/GlobalAdministratorActivationScreen.png" class="project-screenshot" alt="Global Admin Assignment Activation Screen">
+                              <img src="../assets/images/projects/project2/GlobalAdministratorActiveAssignment.png" class="project-screenshot" alt="Global Admin Active Assignment">
+
+                                <h3>9. Review Logs and Diagnostics</h3>
+                                <p>Validate Conditional Access and PIM behavior using sign‑in and audit logs.</p>
+                                <p><strong>Sign-In Logs</strong></p>
+                                  <ul>
+                                    <li>Filter by user: Admin‑Account‑01</li>
+                                    <li>Filter by Conditional Access: Applied</li>
+                                    <li>Confirm entries showing MFA requirement</li>
+                                  </ul>
+
+                                  <img src="../assets/images/projects/project2/SignInLogsTable.png" class="project-screenshot" alt="Sign-In Logs Table">
+
+                                  <p><strong>Audit Logs</strong></p>
+                                  <ul>
+                                    <li>Navigate to: Microsoft Entra admin center → Identity Governance → Privileged Identity Management → My Audit History</li>
+                                    <li>Use filters for:</li>
+                                    <ul>
+                                      <li>Role activation (eligible → active)</li>
+                                      <li>Group membership changes</li>
+                                      <li>Policy updates</li>
+                                    </ul>
+                                    <li>Confirm entries showing MFA requirement</li>
+                                  </ul>
+                                  <img src="../assets/images/projects/project2/InteractiveSignInsExportedLogs.png" class="project-screenshot" alt="Exported Sign-In Logs">
+      <!-- Add as many steps as you want -->
+    </section>
+
+    <!-- 6. Key Configurations -->
+    <section class="project-section" id="configurations">
+      <h2>Key Configurations</h2>
+      <ul>
+    <li><strong>Dynamic Group Rule:</strong><pre><code> (user.department -eq "Human Resources")</pre></code></li>
+    <li><strong>Custom Role Permissions:</strong><pre><code> Microsoft.RecoveryServices/*/read</pre></code></li>
+    <li><strong>Conditional Access – MFA Enforcement:</strong> Admin roles → Require MFA</li>
+    <li><strong>Conditional Access – Legacy Auth Block:</strong> Block legacy authentication clients</li>
+    <li><strong>PIM Eligibility Settings:</strong> MFA, justification, activation window</li>
+    <li><strong>RBAC Group Assignments:</strong> Reader + Contributor via security groups</li>
+      </ul>
+    </section>
+
+    <!-- 7. Challenges & Solutions -->
+    <section class="project-section" id="challenges">
+      <h2>Challenges & Solutions</h2>
+      <ul>
+        <li><strong>Challenge:</strong> Some settings were not located where documentation indicated.</li>
+        <li><strong>Solution:</strong> Used updated Entra admin center navigation + Microsoft Learn references to locate new menu paths.</li>
+      </ul>
+        <ul>
+        <li><strong>Challenge:</strong> Export button missing in custom role description.</li>
+        <li><strong>Solution:</strong> Captured JSON via Azure CLI / portal alternative views.</li>
+        </ul>
+          <ul>
+            <li><strong>Challenge: </strong> Dynamic group membership took time to populate.</li>
+            <li><strong>Solution:</strong> Allowed directory evaluation cycle to complete.</li>
+          </ul>
+    </section>
+
+    <!-- 8. Results & Metrics -->
+    <section class="project-section" id="results">
+      <h2>Results & Metrics</h2>
+      <ul>
+        <li><strong>Identity Structure Built:</strong> 5 users, 3 static groups, 1 dynamic group (not including other users and groups created for other Azure labs)</li>
+      </ul>
+        <ul>
+          <li><strong>RBAC Coverage:</strong> Reader + Contributor + Custom Backup Reader</li>
+        </ul>
+        <ul>
+          <li><strong>Conditional Access Enforcement:</strong> MFA required for admin roles</li>
+        </ul>
+        <ul>
+        <li><strong>Legacy Authentication:</strong> Fully blocked</li>
+        </ul>
+        <ul>
+        <li><strong>PIM Governance:</strong> Just‑in‑time access implemented</li>
+        </ul>
+        <ul>
+        <li><strong>Audit Visibility:</strong> Full logs for role activation, CA enforcement, and sign‑ins</li>
+        </ul>
+        <ul><li><strong>Operational Automation:</strong> Dynamic group membership auto‑populated based on department</li>
+        </ul>
+    </section>
+
+    <!-- 9. Key Takeaways -->
+    <section class="project-section" id="takeaways">
+      <h2>Key Takeaways</h2>
+      <ul>
+        <li><strong>Group‑based RBAC is superior</strong> to user‑based assignments</li>
+      </ul>
+        <ul>
+          <li><strong>Dynamic groups reduce operational overhead</strong> and prevent drift</li>
+        </ul>
+          <ul>
+            <li><strong>Conditional Access is the new perimeter</strong> for cloud identity security</li>
+          </ul>
+            <ul>
+              <li><strong>PIM enforces least privilege</strong> with just‑in‑time elevation</li>
+            </ul>
+              <ul>
+                <li><strong>Audit logs provide essential governance visibility</strong></li>
+              </ul>
+    </section>
+
+    <!-- 10. GitHub Link -->
+     <div class="github-button-container">
+      <a class="github-button" href="https://github.com/Little-Pink-Cloud/LittlePinkCloud-Static-Site">View on GitHub</a>
+    </div>
+  </div>
+
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const carousels = document.querySelectorAll("[data-carousel]");
+
+  carousels.forEach(carousel => {
+    const track = carousel.querySelector("[data-carousel-track]");
+    const slides = Array.from(track.children);
+    const prevBtn = carousel.querySelector("[data-carousel-prev]");
+    const nextBtn = carousel.querySelector("[data-carousel-next]");
+    const dotsContainer = carousel.querySelector("[data-carousel-dots]");
+
+    /* ⭐ NEW: caption element */
+    const captionBox = carousel.querySelector("[data-carousel-caption]");
+
+    let currentIndex = 0;
+
+    /* ===== Create Dots ===== */
+    slides.forEach((_, i) => {
+      const dot = document.createElement("button");
+      if (i === 0) dot.classList.add("active");
+      dotsContainer.appendChild(dot);
+
+      dot.addEventListener("click", () => goToSlide(i));
+    });
+
+    const dots = Array.from(dotsContainer.children);
+
+    /* ===== Slide Logic ===== */
+    function goToSlide(index) {
+      slides[currentIndex].classList.remove("active");
+      dots[currentIndex].classList.remove("active");
+
+      currentIndex = index;
+
+      slides[currentIndex].classList.add("active");
+      dots[currentIndex].classList.add("active");
+
+      /* ⭐ NEW: Update caption */
+      const caption = slides[currentIndex].dataset.caption || "";
+      captionBox.textContent = caption;
+    }
+
+    /* ⭐ Initialize caption on load */
+    const initialCaption = slides[0].dataset.caption || "";
+    captionBox.textContent = initialCaption;
+
+    prevBtn.addEventListener("click", () => {
+      const newIndex = (currentIndex - 1 + slides.length) % slides.length;
+      goToSlide(newIndex);
+    });
+
+    nextBtn.addEventListener("click", () => {
+      const newIndex = (currentIndex + 1) % slides.length;
+      goToSlide(newIndex);
+    });
+
+    /* ===== Swipe Support ===== */
+    let startX = 0;
+
+    track.addEventListener("touchstart", e => {
+      startX = e.touches[0].clientX;
+    });
+
+    track.addEventListener("touchend", e => {
+      const endX = e.changedTouches[0].clientX;
+      const diff = endX - startX;
+
+      if (Math.abs(diff) > 50) {
+        if (diff > 0) {
+          prevBtn.click();
+        } else {
+          nextBtn.click();
+        }
+      }
+    });
+  });
+});
+</script>
+<script>
+  // Toggle floating nav
+  document.getElementById("navToggle").addEventListener("click", () => {
+    const nav = document.getElementById("floatingNav");
+    const toggle = document.getElementById("navToggle");
+
+    nav.classList.toggle("open");
+
+    // ✨ Darken the nav toggle when active
+    toggle.classList.toggle("active");
+  });
+
+  // Smooth scroll
+  document.querySelectorAll('.floating-nav a').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(link.getAttribute('href'));
+      target.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+
+  // Highlight nav link only when clicked
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll(".floating-nav a");
+
+  document.querySelectorAll('.floating-nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.querySelectorAll('.floating-nav a').forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
+    });
+  });
+
+  // Utility buttons
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function scrollToBottom() {
+    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+  }
+</script>
+</body>
+</html>
